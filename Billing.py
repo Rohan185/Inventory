@@ -39,9 +39,9 @@ class BILLINGCLASS:
                         font=("times new roman", 40, "bold"), bg="#010c48", fg="white", anchor="w", padx=20)
         title.place(x=0, y=0, relwidth=1, height=70)
         #===btn_logout====
-        Btn_logout=Button(self.root,command=self.logout,text="Logout",font=("times new roman",15,"bold"),bg="Yellow",cursor="hand2").place(x=1150,y=10,height=50,width=150)
+        Btn_logout=Button(self.root,command=self.logout,text="Logout",font=("times new romen",15,"blod"),bg="Yellow",cursor="hand2").place(x=1150,y=10,height=50,width=150)
         #===clock====
-        self.lal_clock= Label(self.root, text="Welcome to Inventory Management System\t\t Date:DD/MM.YYYY\t\t Time:HH:MM:SS", font=("times new roman",15),bg="#4d636d",fg="white")
+        self.lal_clock= Label(self.root, text="Welcome to Inventory Management System\t\t Date:DD/MM.YYYY\t\t Time:HH:MM:SS", font=("times new roman",15),bg="#4d636d",fg="white",anchor="w")
         self.lal_clock.place(x=0, y=70, relwidth=1, height=30)
 
         #====Product===========================================================
@@ -71,7 +71,7 @@ class BILLINGCLASS:
         btn_search.place(x=285, y=5, width=100, height=25)
 
         btn_show_all = Button(self.ProductFrame2, text="Show All", command=self.show,
-                            font=("goudy old style", 15), bg="#83b531", fg="white", cursor="hand2")
+                            font=("goudy old style", 15), bg="#83531", fg="white", cursor="hand2")
         btn_show_all.place(x=285, y=45, width=100, height=25)
 
         #===Product Frame Details===================================================
@@ -119,11 +119,11 @@ class BILLINGCLASS:
 
         ctitle=Label(CustomerFrame,text="Customer Details",font=("goudy old style",20),bg="lightgray").pack(side=TOP,fill=X)
         
-        lbl_name=Label(CustomerFrame,text="Name",font=("times new roman",15),bg="white",fg="green").place(x=5,y=35)
-        txt_name=Entry(CustomerFrame,textvariable=self.var_cname,font=("times new roman",13),bg="lightyellow").place(x=80,y=35,width=180)
+        lbl_name=Label(CustomerFrame,text=" Name",font=("time new romen",15),bg="white",fg="green").Place(X=5,Y=35)
+        txt_name=Entry(CustomerFrame,textvariable=self.var_cname,font=("time new romen",13,),bg="lightyellow").Place(X=80,Y=35,width=180)
 
-        lbl_Contact=Label(CustomerFrame,text="Contact No",font=("times new roman",15),bg="white",fg="green").place(x=270,y=35)
-        txt_Contact=Entry(CustomerFrame,textvariable=self.var_contact,font=("times new roman",13),bg="lightyellow").place(x=380,y=35,width=140)
+        lbl_Contact=Label(CustomerFrame,text=" Contact No",font=("time new romen",15),bg="white",fg="green").Place(X=270,Y=35)
+        txt_Contact=Entry(CustomerFrame,textvariable=self.var_contact,font=("time new romen",13),bg="lightyellow").Place(X=380,Y=35,width=140)
        #====Cal Cart Frame====================================================
         Cal_Cart_Frame=Frame(self.root,bd=4,relief=RIDGE,bg="white")
         Cal_Cart_Frame.place(x=420,y=190,width=530,height=360)
@@ -137,54 +137,54 @@ class BILLINGCLASS:
         txt_cal_input=Entry(Cal_Frame,textvariable=self.var_Cal_input,font=('arial',15,'bold'),width=21,bd=10,relief=GROOVE,state="readonly",justify=RIGHT)
         txt_cal_input.grid(row=0,columnspan=4)
 
-        btn_7=Button(Cal_Frame,text='7',font=('arial',15,"bold"),command=lambda:self.get_input('7'),bd=5,width=5,pady=10,cursor="hand2").grid(row=1,column=0)
-        btn_8=Button(Cal_Frame,text='8',font=('arial',15,"bold"),command=lambda:self.get_input('8'),bd=5,width=5,pady=10,cursor="hand2").grid(row=1,column=1)
-        btn_9=Button(Cal_Frame,text='9',font=('arial',15,"bold"),command=lambda:self.get_input('9'),bd=5,width=5,pady=10,cursor="hand2").grid(row=1,column=2)
-        btn_sum=Button(Cal_Frame,text='+',font=('arial',15,"bold"),command=lambda:self.get_input('+'),bd=5,width=5,pady=10,cursor="hand2").grid(row=1,column=3)
+        btn_7=Button(Cal_Frame,text='7',font=('arial',15,"bold"),command=lambda:self.get_input('7'),bd=5,width=5,pady=10,cursor="hand2").grid(row=1,columnspan=0)
+        btn_8=Button(Cal_Frame,text='8',font=('arial',15,"bold"),command=lambda:self.get_input('8'),bd=5,width=5,pady=10,cursor="hand2").grid(row=1,columnspan=1)
+        btn_9=Button(Cal_Frame,text='9',font=('arial',15,"bold"),command=lambda:self.get_input('9'),bd=5,width=5,pady=10,cursor="hand2").grid(row=1,columnspan=2)
+        btn_sum =Button(Cal_Frame,text='+',font=('arial',15,"bold"),command=lambda:self.get_input('+'),bd=5,width=5,pady=10,cursor="hand2").grid(row=1,columnspan=3)
 
-        btn_4=Button(Cal_Frame,text='4',font=('arial',15,"bold"),command=lambda:self.get_input('4'),bd=5,width=5,pady=10,cursor="hand2").grid(row=2,column=0)
-        btn_5=Button(Cal_Frame,text='5',font=('arial',15,"bold"),command=lambda:self.get_input('5'),bd=5,width=5,pady=10,cursor="hand2").grid(row=2,column=1)
-        btn_6=Button(Cal_Frame,text='6',font=('arial',15,"bold"),command=lambda:self.get_input('6'),bd=5,width=5,pady=10,cursor="hand2").grid(row=2,column=2)
-        btn_minus=Button(Cal_Frame,text='-',font=('arial',15,"bold"),command=lambda:self.get_input('-'),bd=5,width=5,pady=10,cursor="hand2").grid(row=2,column=3)
+        btn_4=Button(Cal_Frame,text='4',font=('arial',15,"bold"),command=lambda:self.get_input('4'),bd=5,width=5,pady=10,cursor="hand2").grid(row=2,columnspan=0)
+        btn_5=Button(Cal_Frame,text='5',font=('arial',15,"bold"),command=lambda:self.get_input('5'),bd=5,width=5,pady=10,cursor="hand2").grid(row=2,columnspan=1)
+        btn_6=Button(Cal_Frame,text='6',font=('arial',15,"bold"),command=lambda:self.get_input('6'),bd=5,width=5,pady=10,cursor="hand2").grid(row=2,columnspan=2)
+        btn_sum =Button(Cal_Frame,text='-',font=('arial',15,"bold"),command=lambda:self.get_input('-'),bd=5,width=5,pady=10,cursor="hand2").grid(row=2,columnspan=3)
 
-        btn_1=Button(Cal_Frame,text='1',font=('arial',15,"bold"),command=lambda:self.get_input('1'),bd=5,width=5,pady=10,cursor="hand2").grid(row=3,column=0)
-        btn_2=Button(Cal_Frame,text='2',font=('arial',15,"bold"),command=lambda:self.get_input('2'),bd=5,width=5,pady=10,cursor="hand2").grid(row=3,column=1)
-        btn_3=Button(Cal_Frame,text='3',font=('arial',15,"bold"),command=lambda:self.get_input('3'),bd=5,width=5,pady=10,cursor="hand2").grid(row=3,column=2)
-        btn_mul=Button(Cal_Frame,text='*',font=('arial',15,"bold"),command=lambda:self.get_input('*'),bd=5,width=5,pady=10,cursor="hand2").grid(row=3,column=3)
+        btn_1=Button(Cal_Frame,text='1',font=('arial',15,"bold"),command=lambda:self.get_input('1'),bd=5,width=5,pady=10,cursor="hand2").grid(row=3,columnspan=0)
+        btn_2=Button(Cal_Frame,text='2',font=('arial',15,"bold"),command=lambda:self.get_input('2'),bd=5,width=5,pady=10,cursor="hand2").grid(row=3,columnspan=1)
+        btn_3=Button(Cal_Frame,text='3',font=('arial',15,"bold"),command=lambda:self.get_input('3'),bd=5,width=5,pady=10,cursor="hand2").grid(row=3,columnspan=2)
+        btn_mul =Button(Cal_Frame,text='*',font=('arial',15,"bold"),command=lambda:self.get_input('*'),bd=5,width=5,pady=10,cursor="hand2").grid(row=3,columnspan=3)
         
-        btn_0=Button(Cal_Frame,text='0',font=('arial',15,"bold"),command=lambda:self.get_input('0'),bd=5,width=5,pady=15,cursor="hand2").grid(row=4,column=0)
-        btn_c=Button(Cal_Frame,text='c',font=('arial',15,"bold"),command=self.clear_cal,bd=5,width=5,pady=15,cursor="hand2").grid(row=4,column=1)
-        btn_eq=Button(Cal_Frame,text='=',font=('arial',15,"bold"),command=self.perform_cal,bd=5,width=5,pady=15,cursor="hand2").grid(row=4,column=2)
-        btn_div=Button(Cal_Frame,text='/',font=('arial',15,"bold"),command=lambda:self.get_input('/'),bd=5,width=5,pady=15,cursor="hand2").grid(row=4,column=3)
+        btn_0=Button(Cal_Frame,text='0',font=('arial',15,"bold"),command=lambda:self.get_input('0'),bd=5,width=5,pady=15,cursor="hand2").grid(row=4,columnspan=0)
+        btn_c=Button(Cal_Frame,text='c',font=('arial',15,"bold"),ommand=self.clear_cal,bd=5,width=5,pady=15,cursor="hand2").grid(row=4,columnspan=1)
+        btn_eq=Button(Cal_Frame,text='=',font=('arial',15,"bold"),command=self.perform_cal,bd=5,width=5,pady=15,cursor="hand2").grid(row=4,columnspan=2)
+        btn_div =Button(Cal_Frame,text='/',font=('arial',15,"bold"),command=lambda:self.get_input('/'),bd=5,width=5,pady=15,cursor="hand2").grid(row=4,columnspan=3)
 
      #=====cart frame========================================== 
         cart_frame=Frame(Cal_Cart_Frame,bd=3,relief=RIDGE)
         cart_frame.place(x=280,y=8,width=245,height=342)
-        self.cartTitle=Label(cart_frame,text="Cart\t Total Product:[0]",font=("goudy old style",15,"bold"),bg="#262626",fg="white")
+        self.cartTitle=Label(cart_frame,text="Cart\t Total Product:[0]",font=("goudy old style",20,"bold"),bg="#262626",fg="white")
         self.cartTitle.pack(side=TOP,fill=X)
 
 
         Scrolly=Scrollbar(cart_frame,orient=VERTICAL)
         Scrollx=Scrollbar(cart_frame,orient=HORIZONTAL)
 
-        self.Cart_Table=ttk.Treeview(cart_frame,columns=("pid","name","price","qty"),yscrollcommand=Scrolly.set,xscrollcommand=Scrollx.set)
+        self.Cart_Table=ttk.Treeview(cart_frame,columns=("pid","name","Price","Qty"),yscrollcommand=Scrolly.set,xscrollcommand=Scrollx.set)
         Scrollx.pack(side=BOTTOM,fill=X)
         Scrolly.pack(side=RIGHT,fill=Y)
         Scrollx.config(command=self.Cart_Table.xview)
         Scrolly.config(command=self.Cart_Table.yview)
 
-        self.Cart_Table.heading("pid",text="Pid")
-        self.Cart_Table.heading("name",text="Name")
-        self.Cart_Table.heading("price",text="Price")
-        self.Cart_Table.heading("qty",text="Qty")
-        self.Cart_Table["show"]="headings"
+        self.CartTable.heading("pid",text="Pid")
+        self.CartTable.heading("name",text="Name")
+        self.CartTable.heading("Price",text="Price")
+        self.CartTable.heading("Qty",text="Qty")
+        self.CartTable["show"]="headings"
         
-        self.Cart_Table.column("pid",width=40)
-        self.Cart_Table.column("name",width=100)
-        self.Cart_Table.column("price",width=90)
-        self.Cart_Table.column("qty",width=40)
-        self.Cart_Table.pack(fill=BOTH,expand=1)
-        self.Cart_Table.bind("<ButtonRelease-1>",self.get_data_cart)
+        self.CartTable.column("Pid",width=40)
+        self.CartTable.column("name",width=100)
+        self.CartTable.column("Price",width=90)
+        self.Cart_Table.column("Qty",width=40)
+        self.CartTable.pack(fill=BOTH,expand=1)
+        self.Product_Table.bind("<ButtonRelease-1>",self.get_data_cart)
 
    #=====Add Cart widgets Frame==================================
         self.Add_CartwidgetsFrame = Frame(self.root, bd=4, relief=RIDGE, bg="white")
@@ -409,10 +409,6 @@ class BILLINGCLASS:
             # Bill Bottom
             self.bill_bottom()
             
-            # Create bill directory if it doesn't exist
-            if not os.path.exists('bill'):
-                os.makedirs('bill')
-                
             fp = open(f'bill/{str(self.invoice)}.txt', 'w')
             fp.write(self.txt_bill_area.get('1.0', END))
             fp.close()
@@ -477,7 +473,7 @@ class BILLINGCLASS:
         time_now = time.strftime("%I:%M:%S")
         date_now = time.strftime("%d-%m-%Y")
         self.lal_clock.config(text=f"Welcome to Inventory Management System\t\t Date: {str(date_now)}\t\t Time: {str(time_now)}")
-        self.lal_clock.after(200, self.update_date_time)
+        self.lbl_clock.after(200, self.update_date_time)
 
     def print_bill(self):
         if self.chk_print == 1:
